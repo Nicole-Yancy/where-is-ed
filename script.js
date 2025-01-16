@@ -9,7 +9,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Function to fetch and display the latest animal movement
 function displayAnimalMovement() {
     // Replace this URL with your actual data source
-    fetch('https://api.example.com/animal-movement')
+    fetch('https://www.movebank.org/movebank/service/direct-read?entity_type=event&study_id={174165487}&individual_id={769}&sensor_type=gps')
         .then(response => response.json())
         .then(data => {
             const latestPosition = data[data.length - 1];
